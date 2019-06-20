@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void OnGameOver()
+    public void OnGameOver()
     {
         menuGameOver.SetActive(true);
         gameHUD.SetActive(false);
@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    private void OnGameWin()
+    public void OnGameWin()
     {
         menuGameWin.SetActive(true);
         gameHUD.SetActive(false);

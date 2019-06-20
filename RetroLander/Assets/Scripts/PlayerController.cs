@@ -44,15 +44,119 @@ public class PlayerController : MonoBehaviour
 
     private string setaBaixo = "\u2193";
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(transform.right * 100f);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (combustivel > 0)
+        {
+            Propulsor();
+        }
+
+        Rotaciona();
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 100f, raycastLayerMask);
+        if (hit.collider != null)
+        {
+            altitude = Mathf.Abs(hit.point.y - transform.position.y);
+        }
+
+    }
+
+    private void Update()
+    {
+        AtualizaHUD();
+    }
+
+    public void Propulsor()
+    {
+        float v = Input.GetAxis("Vertical");
+        if (Mathf.Abs(Input.GetAxis("Vertical")) > 0) {
+            propulsorFX.enabled = true;
+            combustivel -= consumoCombustivel;
+        }
+        else
+        {
+            propulsorFX.enabled = false;
+        }
+
+        rb.AddForce(transform.up * v);
+
+        velocidadeVertical = Mathf.FloorToInt(rb.velocity.y * 100f);
+
+        if(Mathf.Abs(rb.position.x) > 27)
+        {
+            rb.position = new Vector2(rb.position.x * -1, rb.position.y);
+        }
+    }
+
+    public void Rotaciona()
+    {
+        float h = Input.GetAxis("Horizontal");
+        rb.MoveRotation(rb.rotation + (h * velocidade * Time.fixedDeltaTime) * -1);
+
+        velocidadeHorizontal = Mathf.FloorToInt(rb.velocity.x * 100f);
+    }
+
+    public void AtualizaHUD()
+    {
+        if(velocidadeVertical < 0)
+        {
+            hudVelocidadeVertical.text = string.Format("VELOC V.: {0} {1}", Mathf.Abs(velocidadeVertical), setaBaixo);
+        }
+        else
+        {
+            hudVelocidadeVertical.text = string.Format("VELOC V.: {0} {1}", Mathf.Abs(velocidadeVertical), setaCima);
+        }
+
+        if(velocidadeHorizontal < 0)
+        {
+            hudVelocidadeHorizontal.text = string.Format("VELOC H.: {0} {1}", Mathf.Abs(velocidadeHorizontal), setaEsquerda);
+        }
+        else
+        {
+            hudVelocidadeHorizontal.text = string.Format("VELOC H.: {0} {1}", Mathf.Abs(velocidadeHorizontal), setaDireita);
+        }
+
+        hudCombustivel.text = string.Format("COMBUSTIVEL: {0}", Mathf.Floor(combustivel));
+        hudAltitude.text = string.Format("ALTITUDE: {0}", Mathf.Floor(altitude));
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Montanha":
+                Instantiate(explosao, collision.contacts[0].point, Quaternion.identity);
+                Destroy(gameObject);
+                break;
+            case "AreaSegura":
+                if(Mathf.Abs(velocidadeVertical) > velocidadeLimitePouso)
+                {
+                    Instantiate(explosao, collision.contacts[0].point, Quaternion.identity);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    GameController gc = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+                    this.enabled = false;
+                    propulsorFX.enabled = false;
+                    gc.OnGameWin();
+                }
+
+                break;
+            default:
+                break;
+        }
     }
 }
+
+    

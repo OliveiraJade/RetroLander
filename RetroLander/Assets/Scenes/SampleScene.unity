@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 188558880}
   m_Layer: 0
   m_Name: Montanha_01 (1)
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 264138870}
   m_Layer: 0
   m_Name: Montanha_01
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -801,7 +801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -255, y: -529}
+  m_AnchoredPosition: {x: 808, y: -202.99997}
   m_SizeDelta: {x: 510, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &342384804
@@ -875,7 +875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &381117502
 MonoBehaviour:
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 383988928}
   m_Layer: 0
   m_Name: Montanha_04
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1232,6 +1232,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1247,6 +1248,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99e27b5b8f0294498f210185141a7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1720331476}
+  zoomMinimo: 15
+  zoomMaximo: 4
+  intervalo: 0.1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1455,7 +1472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -255, y: -469}
+  m_AnchoredPosition: {x: 808, y: -142.99997}
   m_SizeDelta: {x: 510, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577170057
@@ -1564,7 +1581,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &637326422
 GameObject:
@@ -2081,7 +2098,7 @@ RectTransform:
   - {fileID: 1851004522}
   - {fileID: 808337766}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2450,7 +2467,7 @@ GameObject:
   - component: {fileID: 1280218042}
   m_Layer: 0
   m_Name: Montanha_03
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3009,7 +3026,7 @@ GameObject:
   - component: {fileID: 1377141016}
   m_Layer: 0
   m_Name: Montanha_02
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3343,7 +3360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -255, y: -409}
+  m_AnchoredPosition: {x: 808, y: -83}
   m_SizeDelta: {x: 510, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536870791
@@ -3772,7 +3789,7 @@ GameObject:
   - component: {fileID: 1688450015}
   m_Layer: 0
   m_Name: Montanha_02 (2)
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4084,6 +4101,7 @@ GameObject:
   - component: {fileID: 1720331475}
   - component: {fileID: 1720331474}
   - component: {fileID: 1720331477}
+  - component: {fileID: 1720331478}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4213,12 +4231,38 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.05
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1720331478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720331473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df4bee7def3104419236ce1852f9c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: 50
+  combustivel: 1000
+  consumoCombustivel: 1
+  velocidadeLimitePouso: 200
+  raycastLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  propulsorFX: {fileID: 734092050}
+  explosao: {fileID: 3822337301289285419, guid: 0d947255e7c03ab4eb19675cf20882ae,
+    type: 3}
+  hudAltitude: {fileID: 1536870791}
+  hudCombustivel: {fileID: 577170057}
+  hudVelocidadeVertical: {fileID: 342384804}
+  hudVelocidadeHorizontal: {fileID: 1934265666}
 --- !u!1 &1742151424
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,7 +4452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -255, y: -589}
+  m_AnchoredPosition: {x: 808, y: -262.99997}
   m_SizeDelta: {x: 510, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1934265666
@@ -4547,7 +4591,7 @@ GameObject:
   - component: {fileID: 2119837358}
   m_Layer: 0
   m_Name: Montanha_02 (1)
-  m_TagString: Untagged
+  m_TagString: Montanha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4768,75 +4812,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &5971138117371445456
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 796063238007170394, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_Name
-      value: Explosao
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.84242
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.0657766
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513930137917760183, guid: 0d947255e7c03ab4eb19675cf20882ae,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0d947255e7c03ab4eb19675cf20882ae, type: 3}
 --- !u!1001 &7242571249161662114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4903,6 +4878,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242571248791674243, guid: b74099042aca95348a2c420ff99dae03,
+        type: 3}
+      propertyPath: m_TagString
+      value: AreaSegura
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242571249874125488, guid: b74099042aca95348a2c420ff99dae03,
+        type: 3}
+      propertyPath: m_TagString
+      value: AreaSegura
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74099042aca95348a2c420ff99dae03, type: 3}
