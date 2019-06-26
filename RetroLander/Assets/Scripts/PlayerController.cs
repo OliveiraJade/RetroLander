@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "AreaSegura":
+                Debug.Log("Pousou na AreaSegura");
                 if(Mathf.Abs(velocidadeVertical) > velocidadeLimitePouso)
                 {
                     Instantiate(explosao, collision.contacts[0].point, Quaternion.identity);
